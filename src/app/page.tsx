@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between md:py-20 px-4">
+    <main className="flex min-h-screen flex-col items-center justify-between md:py-20 px-8">
       <p className="font-cairo text-7xl md:text-[9rem] -z-10 fixed top-5 md:top-20 text-orange-400">
         KATA
       </p>
@@ -20,7 +20,7 @@ export default function Home() {
             alt="Kata Csuhaj"
             width={500}
             height={500}
-            className="-mt-20 max-h-[50vh] md:max-h-[80vh] w-auto mx-auto"
+            className="-mt-20 max-h-[50vh] md:max-h-[75vh] w-auto mx-auto"
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <p className="text-2xl md:max-w-96 my-8 text-left self-start">
+      <p className="text-4xl md:max-w-screen-sm my-8 text-left self-start">
         With main focus on Web and communication design,
         <br />I also have a passion for crafting illustrations, and designing
         layouts.
