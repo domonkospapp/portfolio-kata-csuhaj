@@ -8,12 +8,12 @@ export default function Home() {
         KATA
       </p>
       <h1 className="text-6xl md:text-9xl text-center font-bold mt-8 mb-4">
-        <span className="text-3xl font-machina font-normal sm:visible invisible">
+        <span className="text-3xl font-machina font-normal sm:inline hidden">
           {" "}
           graphic
         </span>
         <span className="font-polonium">KATA</span>
-        <span className="text-3xl font-machina font-normal sm:visible invisible">
+        <span className="text-3xl font-machina font-normal sm:inline hidden">
           {" "}
           designer
         </span>
