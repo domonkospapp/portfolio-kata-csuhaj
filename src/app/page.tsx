@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
             alt="Kata Csuhaj"
             width={500}
             height={500}
-            className="-mt-20 max-h-[80vh] w-auto mx-auto"
+            className="-mt-20 max-h-[50vh] md:max-h-[80vh] w-auto mx-auto"
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -56,12 +57,25 @@ export default function Home() {
       <Title>WORK</Title>
       <div className="grid md:grid-cols-2 grid-cols-1">
         <WorkItem
+          id="ai11"
+          imageCount={2}
           title="Landing page redesi for a digital agency"
           src="/thumbnails/ai11.png"
         />
-        <WorkItem title="BOLD PERIOD PACKAGING" src="/thumbnails/flux.png" />
-        <WorkItem title="ILLUSTRATIONS" src="/thumbnails/illustrations.png" />
-        <WorkItem title="REEMO VISUALS" src="/thumbnails/reemo.png" />
+        {/* <WorkItem title="BOLD PERIOD PACKAGING" src="/thumbnails/flux.png" /> */}
+        {/* <WorkItem title="ILLUSTRATIONS" src="/thumbnails/illustrations.png" /> */}
+        <WorkItem
+          id="reemo"
+          imageCount={4}
+          title="REEMO VISUALS"
+          src="/thumbnails/reemo.png"
+        />
+        <WorkItem
+          id="surreal"
+          imageCount={5}
+          title="SURREALISM"
+          src="/thumbnails/surreal.png"
+        />
       </div>
       <Title>
         CON
@@ -89,9 +103,22 @@ const Title = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-const WorkItem = ({ title, src }: { title: string; src: string }) => {
+const WorkItem = ({
+  title,
+  src,
+  id,
+  imageCount,
+}: {
+  title: string;
+  src: string;
+  id: string;
+  imageCount: number;
+}) => {
   return (
-    <div className="border-b-2 border-black flex p-2 gap-2 justify-between w-full col-span-1">
+    <Link
+      href={`/works/${id}?imageCount=${imageCount}`}
+      className="border-b-2 border-black flex p-2 gap-2 justify-between w-full col-span-1"
+    >
       <Image
         src={src}
         alt="Landing page redesign for a digital agency"
@@ -99,6 +126,6 @@ const WorkItem = ({ title, src }: { title: string; src: string }) => {
         height={150}
       />
       <p>{title}</p>
-    </div>
+    </Link>
   );
 };
