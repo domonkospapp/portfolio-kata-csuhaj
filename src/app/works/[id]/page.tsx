@@ -25,16 +25,14 @@ export default function Home({
       {Array(Number(imageCount))
         .fill(0)
         .map((e, i) => (
-          <Suspense key={i} fallback={<div>Loading...</div>}>
-            <Image
-              key={i}
-              src={`/works/${id}/${i + 1}.png`}
-              alt="Kata Csuhaj"
-              width={500}
-              height={500}
-              className="w-full"
-            />
-          </Suspense>
+          <Image
+            key={i}
+            src={`/works/${id}/${i + 1}.png`}
+            alt="Kata Csuhaj"
+            width={500}
+            height={500}
+            className="w-full"
+          />
         ))}
       <GoUpButton />
     </main>
