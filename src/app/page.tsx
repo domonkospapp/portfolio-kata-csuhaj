@@ -7,11 +7,13 @@ export default function Home() {
       <p className="font-cairo text-7xl md:text-[9rem] -z-10 fixed top-5 md:top-20 text-orange-400">
         KATA
       </p>
-      <Title>
-        KATA
+      <h1 className="text-6xl md:text-9xl text-center font-bold mt-8 mb-4">
+        <span className="text-3xl font-machina font-normal"> graphic</span>
+        <span className="font-polonium">KATA</span>
+        <span className="text-3xl font-machina font-normal"> designer</span>
         <br />
-        CSUHAJ
-      </Title>
+        <span className="font-polonium">CSUHAJ</span>
+      </h1>
       <div className="grid sm:grid-cols-1 md:grid-cols-[minmax(0,1fr),auto,minmax(0,1fr)]">
         <div className="col-span-1" />
         <div className="">
