@@ -13,6 +13,11 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        cairo: "var(--font-cairo)",
+        machina: "var(--font-machina)",
+        polonium: "var(--font-polonium)",
+      },
     },
   },
   plugins: [],

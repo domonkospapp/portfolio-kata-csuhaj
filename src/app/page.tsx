@@ -2,112 +2,103 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="flex min-h-screen flex-col items-center justify-between py-20 px-4">
+      <p className="font-cairo text-7xl md:text-[9rem] -z-10 fixed top-20 md:top-20 text-orange-400">
+        KATA
+      </p>
+      <Title>
+        KATA
+        <br />
+        CSUHAJ
+      </Title>
+      <div className="grid sm:grid-cols-1 md:grid-cols-[minmax(0,1fr),auto,minmax(0,1fr)]">
+        <div className="col-span-1" />
+        <div className="">
+          <Image
+            src="/thedesigner.png"
+            alt="Kata Csuhaj"
+            width={500}
+            height={500}
+            className="-mt-20 max-h-[80vh] w-auto mx-auto"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-12 -mt-12 mx-auto"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
             />
-          </a>
+          </svg>
+        </div>
+        <div
+          className="flex col-span-1 items-center"
+          style={{ direction: "rtl" }}
+        >
+          <p className="text-4xl uppercase text-wrap">
+            I&apos;m Kata
+            <br /> a communication designer
+            <br /> based in
+            <br /> <b>Bischofshofen</b>, Austria.🇦🇹
+          </p>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      <p className="text-2xl md:max-w-screen-md my-8">
+        With main focus on Web and communication design, I also have a passion
+        for crafting illustrations, and designing layouts.
+      </p>
+      <h2 className="text-4xl my-12 text-center">Check out my work!</h2>
+      <Title>WORK</Title>
+      <div className="grid md:grid-cols-2 grid-cols-1">
+        <WorkItem
+          title="Landing page redesi for a digital agency"
+          src="/thumbnails/ai11.png"
         />
+        <WorkItem title="BOLD PERIOD PACKAGING" src="/thumbnails/flux.png" />
+        <WorkItem title="ILLUSTRATIONS" src="/thumbnails/illustrations.png" />
+        <WorkItem title="REEMO VISUALS" src="/thumbnails/reemo.png" />
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <Title>
+        CON
+        <br />
+        TACT
+      </Title>
+      <p className="text-2x">
+        <b>Email:</b>
+        <br />
+        <a href="mailto:csuhajkata@gmail.com">csuhajkata@gmail.com</a>
+        <br />
+        <b>Phone:</b>
+        <br />
+        <a href="tel:+436641234567">+43 664 123 4567</a>
+      </p>
     </main>
   );
 }
+
+const Title = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <h1 className="text-6xl md:text-9xl text-center font-bold font-polonium mt-8 mb-4">
+      {children}
+    </h1>
+  );
+};
+
+const WorkItem = ({ title, src }: { title: string; src: string }) => {
+  return (
+    <div className="border-b-2 border-black flex p-2 gap-2 justify-between w-full col-span-1">
+      <Image
+        src={src}
+        alt="Landing page redesign for a digital agency"
+        width={200}
+        height={150}
+      />
+      <p>{title}</p>
+    </div>
+  );
+};
