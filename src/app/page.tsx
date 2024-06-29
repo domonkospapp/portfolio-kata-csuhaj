@@ -8,12 +8,25 @@ export default function Home() {
         KATA
       </p>
       <h1 className="text-6xl md:text-9xl text-center font-bold mt-8 mb-4">
-        <span className="text-3xl font-machina font-normal"> graphic</span>
+        <span className="text-3xl font-machina font-normal sm:visible invisible">
+          {" "}
+          graphic
+        </span>
         <span className="font-polonium">KATA</span>
-        <span className="text-3xl font-machina font-normal"> designer</span>
+        <span className="text-3xl font-machina font-normal sm:visible invisible">
+          {" "}
+          designer
+        </span>
         <br />
         <span className="font-polonium">CSUHAJ</span>
       </h1>
+      <div className="flex justify-between w-full sm:hidden">
+        <span className="text-3xl font-machina font-normal"> graphic</span>
+        <span className="text-3xl text-right font-machina font-normal">
+          designer
+        </span>
+      </div>
+
       <div className="grid sm:grid-cols-1 md:grid-cols-[minmax(0,1fr),auto,minmax(0,1fr)]">
         <div className="col-span-1" />
         <div className="">
