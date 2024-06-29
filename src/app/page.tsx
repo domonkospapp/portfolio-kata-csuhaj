@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between py-20 px-4">
-      <p className="font-cairo text-7xl md:text-[9rem] -z-10 fixed top-20 md:top-20 text-orange-400">
+    <main className="flex min-h-screen flex-col items-center justify-between md:py-20 px-4">
+      <p className="font-cairo text-7xl md:text-[9rem] -z-10 fixed top-5 md:top-20 text-orange-400">
         KATA
       </p>
       <Title>
@@ -38,20 +38,29 @@ export default function Home() {
           </svg>
         </div>
         <div
-          className="flex col-span-1 items-center"
+          className="col-span-1 items-center hidden md:flex text-5xl uppercase"
           style={{ direction: "rtl" }}
         >
-          <p className="text-4xl uppercase text-wrap">
-            I&apos;m Kata
-            <br /> a communication designer
-            <br /> based in
-            <br /> <b>Bischofshofen</b>, Austria.🇦🇹
+          <div>
+            <p className="text-left">I&apos;m Kata a communication designer</p>
+            <p className="text-center">based in</p>
+            <p>
+              <b>Bischofshofen</b>, Austria.🇦🇹
+            </p>
+          </div>
+        </div>
+        <div className="col-span-1 text-4xl uppercase items-center md:hidden">
+          <p className="">I&apos;m Kata a communication designer</p>
+          <p className="text-center">based in</p>
+          <p className="text-right">
+            <b>Bischofshofen</b>, Austria.🇦🇹
           </p>
         </div>
       </div>
-      <p className="text-2xl md:max-w-screen-md my-8">
-        With main focus on Web and communication design, I also have a passion
-        for crafting illustrations, and designing layouts.
+      <p className="text-2xl md:max-w-96 my-8 text-left self-start">
+        With main focus on Web and communication design,
+        <br />I also have a passion for crafting illustrations, and designing
+        layouts.
       </p>
       <h2 className="text-4xl my-12 text-center">Check out my work!</h2>
       <Title>WORK</Title>
