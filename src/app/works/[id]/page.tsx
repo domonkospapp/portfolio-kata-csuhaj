@@ -1,43 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
+import fs from "fs";
+import path from "path";
 
-export default function Home({
-  params: { id },
-  searchParams: { imageCount },
-}: {
-  params: { id: string };
-  searchParams: { imageCount: string };
-}) {
-  console.log(imageCount);
-  if (!imageCount || Number(imageCount) < 1) {
-    return (
-      <div>
-        <BackButton />
-        <p className="text-center text-4xl p-4">404 Not Fount</p>
-      </div>
-    );
-  }
-
+export default function Home({ params: { id } }: { params: { id: string } }) {
+  const images = loadImages(id);
   return (
-    <main className="">
+    <main>
       <BackButton />
-      {Array(Number(imageCount))
-        .fill(0)
-        .map((e, i) => (
-          <Image
-            key={i}
-            src={`/works/${id}/${i + 1}.png`}
-            alt="Kata Csuhaj"
-            width={500}
-            height={500}
-            className="w-full"
-          />
-        ))}
+      {images.map((image) => (
+        <Image
+          key={image}
+          src={image}
+          alt="Kata Csuhaj"
+          width={1200}
+          height={1200}
+          className="w-full"
+        />
+      ))}
       <GoUpButton />
     </main>
   );
 }
+
+const loadImages = (id: string) => {
+  const dirRelativeToPublicFolder = `/works/${id}`;
+
+  const dir = path.resolve(`./public/works/${id}/`);
+
+  const filenames = fs.readdirSync(dir);
+
+  return filenames
+    .map((name) => path.join("/", dirRelativeToPublicFolder, name))
+    .sort();
+};
 
 const BackButton = () => (
   <Link href="/" className="fixed">

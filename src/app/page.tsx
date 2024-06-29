@@ -58,21 +58,23 @@ export default function Home() {
       <div className="grid md:grid-cols-2 grid-cols-1">
         <WorkItem
           id="ai11"
-          imageCount={2}
           title="Landing page redesi for a digital agency"
           src="/thumbnails/ai11.png"
         />
         {/* <WorkItem title="BOLD PERIOD PACKAGING" src="/thumbnails/flux.png" /> */}
         {/* <WorkItem title="ILLUSTRATIONS" src="/thumbnails/illustrations.png" /> */}
         <WorkItem
+          id="mindshift"
+          title="BACHELOR THESIS"
+          src="/thumbnails/mindshift.gif"
+        />
+        <WorkItem
           id="reemo"
-          imageCount={4}
           title="REEMO VISUALS"
           src="/thumbnails/reemo.png"
         />
         <WorkItem
           id="surreal"
-          imageCount={5}
           title="SURREALISM"
           src="/thumbnails/surreal.png"
         />
@@ -107,16 +109,14 @@ const WorkItem = ({
   title,
   src,
   id,
-  imageCount,
 }: {
   title: string;
   src: string;
   id: string;
-  imageCount: number;
 }) => {
   return (
     <Link
-      href={`/works/${id}?imageCount=${imageCount}`}
+      href={`/works/${id}`}
       className="border-b-2 border-black flex p-2 gap-2 justify-between w-full col-span-1"
     >
       <Image
