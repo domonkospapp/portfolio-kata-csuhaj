@@ -78,6 +78,9 @@ export default function Home() {
         layouts.
       </p>
       <h2 className="text-4xl my-12 text-center">Check out my work!</h2>
+      <p className="font-cairo text-7xl md:text-[9rem] -z-10 sticky -mb-40 bg-white md:top-20 text-orange-400">
+        WORK
+      </p>
       <Title>WORK</Title>
       <div className="grid md:grid-cols-2 grid-cols-1">
         <WorkItem
