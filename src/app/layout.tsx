@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import dynamic from "next/dynamic";
+
+const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+  ssr: false,
+});
 
 const polonium = localFont({
   src: [
@@ -62,7 +67,20 @@ export default function RootLayout({
       lang="en"
       className={`${polonium.variable} ${cairo.variable} ${machina.className}`}
     >
-      <body className={machina.className}>{children}</body>
+      <body className={machina.className}>
+        {children}
+        <AnimatedCursor
+          color="255, 255, 255"
+          innerSize={0}
+          outerSize={35}
+          innerScale={1}
+          outerScale={1.7}
+          outerAlpha={1}
+          outerStyle={{
+            mixBlendMode: "exclusion",
+          }}
+        />
+      </body>
     </html>
   );
 }
