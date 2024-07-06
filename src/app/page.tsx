@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between md:py-20 pb-8 sm:px-8 px-4">
+    <main className="flex min-h-screen flex-col items-center justify-between md:py-16 pb-8 sm:px-8 px-4">
       <p className="font-cairo text-7xl md:text-[9rem] -z-10 fixed top-5 md:top-20 text-orange-300">
         KATA
       </p>
@@ -87,8 +87,6 @@ export default function Home() {
           src="/thumbnails/ai11.png"
           actions={["Web Design", "Illustration"]}
         />
-        {/* <WorkItem title="BOLD PERIOD PACKAGING" src="/thumbnails/flux.png" /> */}
-        {/* <WorkItem title="ILLUSTRATIONS" src="/thumbnails/illustrations.png" /> */}
         <WorkItem
           id="mindshift"
           title="BACHELOR THESIS"
@@ -174,7 +172,7 @@ const WorkItem = ({
             <p className="sm:text-2xl text-base sm:text-left text-right w-full">
               {title}
             </p>
-            <div className="flex mt-auto">
+            <div className="flex-col md:flex md:flex-row mt-auto">
               {actions?.map((a) => (
                 <Pill key={a}>{a}</Pill>
               ))}
@@ -203,7 +201,7 @@ const WorkItem = ({
 
 const Pill = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="bg-black rounded-[50%] p-[1px] mx-1">
+    <div className="bg-black rounded-[50%] p-[1px] md:mx-1 my-[1px]">
       <p className="text-sm text-center bg-white rounded-[50%] pt-[2px] px-2">
         {children}
       </p>
