@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between md:py-20 px-8">
-      <p className="font-cairo text-7xl md:text-[9rem] -z-10 fixed top-5 md:top-20 text-orange-400">
+    <main className="flex min-h-screen flex-col items-center justify-between md:py-20 pb-8 sm:px-8 px-4">
+      <p className="font-cairo text-7xl md:text-[9rem] -z-10 fixed top-5 md:top-20 text-orange-300">
         KATA
       </p>
       <h1 className="text-6xl md:text-9xl text-center font-bold mt-8 mb-4">
@@ -35,7 +35,7 @@ export default function Home() {
             alt="Kata Csuhaj"
             width={500}
             height={500}
-            className="-mt-20 max-h-[50vh] md:max-h-[75vh] w-auto mx-auto"
+            className="-mt-20 max-h-[50vh] md:max-h-[75vh] w-auto mx-auto hover:scale-110 transition-transform hover:rotate-3"
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -72,21 +72,20 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <p className="text-4xl md:max-w-screen-sm my-8 text-left self-start">
-        With main focus on Web and communication design,
-        <br />I also have a passion for crafting illustrations, and designing
-        layouts.
+      <p className="text-4xl md:max-w-screen-sm my-8 text-left self-start md:ml-12 ml-0">
+        With main focus on <b>web</b> and <b>communication</b> design,
+        <br />I also have a passion for crafting <b>illustrations</b>, and
+        designing
+        <b> layouts</b>.
       </p>
       <h2 className="text-4xl my-12 text-center">Check out my work!</h2>
-      <p className="font-cairo text-7xl md:text-[9rem] -z-10 sticky -mb-40 bg-white md:top-20 text-orange-400">
-        WORK
-      </p>
       <Title>WORK</Title>
       <div className="grid md:grid-cols-2 grid-cols-1">
         <WorkItem
           id="ai11"
-          title="Landing page redesi for a digital agency"
+          title="AI11 LANDING"
           src="/thumbnails/ai11.png"
+          actions={["Web Design", "Illustration"]}
         />
         {/* <WorkItem title="BOLD PERIOD PACKAGING" src="/thumbnails/flux.png" /> */}
         {/* <WorkItem title="ILLUSTRATIONS" src="/thumbnails/illustrations.png" /> */}
@@ -94,31 +93,45 @@ export default function Home() {
           id="mindshift"
           title="BACHELOR THESIS"
           src="/thumbnails/mindshift.gif"
+          actions={["Web Design", "Illustration", "Layout"]}
         />
         <WorkItem
           id="reemo"
           title="REEMO VISUALS"
           src="/thumbnails/reemo.png"
+          actions={["Web Design", "Layout"]}
         />
         <WorkItem
           id="surreal"
           title="SURREALISM"
           src="/thumbnails/surreal.png"
+          actions={["Editorial", "Illustration"]}
         />
+        <WorkItem
+          id="illustrations"
+          title="ILLUSTRATIONS"
+          src="/thumbnails/illustrations.png"
+          actions={["Illustration"]}
+        />
+        <WorkItem id="flux" title="FLUX" src="/thumbnails/flux.png" />
       </div>
       <Title>
         CON
         <br />
         TACT
       </Title>
-      <p className="text-2x">
+      <p className="text-xl">
         <b>Email:</b>
         <br />
-        <a href="mailto:csuhajkata@gmail.com">csuhajkata@gmail.com</a>
+        <a href="mailto:csuhajkata@gmail.com" className="hover:underline">
+          csuhajkata@gmail.com
+        </a>
         <br />
         <b>Phone:</b>
         <br />
-        <a href="tel:+436641234567">+43 664 123 4567</a>
+        <a href="tel:+436641234567" className="hover:underline">
+          +43 664 123 4567
+        </a>
       </p>
     </main>
   );
@@ -136,23 +149,64 @@ const WorkItem = ({
   title,
   src,
   id,
+  actions,
 }: {
   title: string;
   src: string;
   id: string;
+  actions?: string[];
 }) => {
   return (
-    <Link
-      href={`/works/${id}`}
-      className="border-b-2 border-black flex p-2 gap-2 justify-between w-full col-span-1"
-    >
-      <Image
-        src={src}
-        alt="Landing page redesign for a digital agency"
-        width={200}
-        height={150}
-      />
-      <p>{title}</p>
-    </Link>
+    <div className="border-b-2 border-black group">
+      <Link
+        href={`/works/${id}`}
+        className="flex p-4 justify-between w-full col-span-1 hover:scale-110 transition-transform"
+      >
+        <Image
+          src={src}
+          alt="Landing page redesign for a digital agency"
+          width={200}
+          height={150}
+          className=""
+        />
+        <div className="flex justify-between w-full mx-2">
+          <div className="w-full flex flex-col justify-between">
+            <p className="sm:text-2xl text-base sm:text-left text-right w-full">
+              {title}
+            </p>
+            <div className="flex mt-auto">
+              {actions?.map((a) => (
+                <Pill key={a}>{a}</Pill>
+              ))}
+            </div>
+          </div>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            className="size-6 transition-transform group-hover:-rotate-[135deg] ml-2 sm:block hidden"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+            />
+          </svg>
+        </div>
+      </Link>
+    </div>
+  );
+};
+
+const Pill = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className="bg-black rounded-[50%] p-[1px] mx-1">
+      <p className="text-sm text-center bg-white rounded-[50%] pt-[2px] px-2">
+        {children}
+      </p>
+    </div>
   );
 };
