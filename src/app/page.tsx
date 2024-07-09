@@ -75,9 +75,8 @@ export default function Home() {
       </div>
       <p className="text-3xl md:text-4xl md:max-w-screen-sm my-8 text-left self-start md:ml-12 ml-0">
         With main focus on <b>web</b> and <b>communication</b> design,
-        <br />I also have a passion for crafting <b>illustrations</b>, and
-        designing
-        <b> layouts</b>.
+        <br />I also have a passion for crafting illustrations, and designing
+        layouts.
       </p>
       <h2 className="text-4xl my-12 text-center">Check out my work!</h2>
       <Title>WORK</Title>
