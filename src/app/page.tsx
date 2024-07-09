@@ -106,7 +106,7 @@ export default function Home() {
           actions={["EDITORIAL"]}
         />
         <WorkItem
-          id="illustrations"
+          id="illustrations?margin=true"
           title="ILLUSTRATIONS"
           src="/thumbnails/illustrations.png"
           actions={["ILLUSTRATION", "POSTER"]}
