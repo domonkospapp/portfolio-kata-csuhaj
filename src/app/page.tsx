@@ -85,33 +85,38 @@ export default function Home() {
           id="ai11"
           title="AI11 LANDING"
           src="/thumbnails/ai11.png"
-          actions={["Web Design", "Illustration"]}
+          actions={["UI/UX"]}
         />
         <WorkItem
           id="mindshift"
           title="BACHELOR THESIS"
           src="/thumbnails/mindshift.gif"
-          actions={["Web Design", "Illustration", "Layout"]}
+          actions={["BRANDING", "UI/UX", "EDITORIAL"]}
         />
         <WorkItem
           id="reemo"
           title="REEMO VISUALS"
           src="/thumbnails/reemo.png"
-          actions={["Web Design", "Layout"]}
+          actions={["BRANDING", "UI/UX"]}
         />
         <WorkItem
           id="surreal"
           title="SURREALISM"
           src="/thumbnails/surreal.png"
-          actions={["Editorial", "Illustration"]}
+          actions={["EDITORIAL"]}
         />
         <WorkItem
           id="illustrations"
           title="ILLUSTRATIONS"
           src="/thumbnails/illustrations.png"
-          actions={["Illustration"]}
+          actions={["ILLUSTRATION", "POSTER"]}
         />
-        <WorkItem id="flux" title="FLUX" src="/thumbnails/flux.png" />
+        <WorkItem
+          id="flux"
+          title="FLUX"
+          src="/thumbnails/flux.png"
+          actions={["BRANDING", "PACKAGING"]}
+        />
       </div>
       <Title>
         CON
