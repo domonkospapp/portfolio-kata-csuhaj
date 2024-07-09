@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 export default function BackButton() {
   const router = useRouter();
   return (
-    <button onClick={router.back} className="fixed">
+    <button onClick={router.back} className="fixed rounded-full bg-white m-1">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
