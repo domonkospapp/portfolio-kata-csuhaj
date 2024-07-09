@@ -80,7 +80,7 @@ export default function Home() {
       </p>
       <h2 className="text-4xl my-12 text-center">Check out my work!</h2>
       <Title>WORK</Title>
-      <div className="grid md:grid-cols-2 grid-cols-1">
+      <div className="grid md:gap-10 md:grid-cols-2 grid-cols-1 md:w-full md:p-10">
         <WorkItem
           id="ai11"
           title="AI11 LANDING"
@@ -178,7 +178,7 @@ const WorkItem = ({
             <p className="sm:text-2xl text-base sm:text-left text-right w-full">
               {title}
             </p>
-            <div className="flex-col md:flex md:flex-row mt-auto">
+            <div className="flex-col md:flex md:flex-row mt-auto flex-wrap">
               {actions?.map((a) => (
                 <Pill key={a}>{a}</Pill>
               ))}
