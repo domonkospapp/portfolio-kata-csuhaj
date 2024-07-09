@@ -129,12 +129,12 @@ export default function Home() {
         <a href="mailto:csuhajkata@gmail.com" className="hover:underline">
           csuhajkata@gmail.com
         </a>
-        <br />
+        {/* <br />
         <b>Phone:</b>
         <br />
         <a href="tel:+436641234567" className="hover:underline">
           +43 664 123 4567
-        </a>
+        </a> */}
       </p>
     </main>
   );
