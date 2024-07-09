@@ -116,7 +116,7 @@ export default function Home() {
       </div>
       <Title>
         CON
-        <br />
+        <br className="sm:hidden" />
         TACT
       </Title>
       <p className="text-xl">
