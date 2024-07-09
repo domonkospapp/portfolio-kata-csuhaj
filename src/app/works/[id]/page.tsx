@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import fs from "fs";
 import path from "path";
+import BackButton from "@/components/BackButton";
 
 export default function Home({ params: { id } }: { params: { id: string } }) {
   const images = loadImages(id);
@@ -18,6 +19,7 @@ export default function Home({ params: { id } }: { params: { id: string } }) {
           priority={index === 0}
           className="w-full"
           placeholder="blur"
+          blurDataURL={"public/img-placeholder.gif"}
         />
       ))}
       <GoUpButton />
@@ -36,25 +38,6 @@ const loadImages = (id: string) => {
     .map((name) => path.join("/", dirRelativeToPublicFolder, name))
     .sort();
 };
-
-const BackButton = () => (
-  <Link href="/" className="fixed">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      className="size-8 m-2"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-      />
-    </svg>
-  </Link>
-);
 
 const GoUpButton = () => (
   <Link href="#top" className="float-end m-2">
