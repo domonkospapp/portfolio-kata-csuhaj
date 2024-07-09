@@ -35,6 +35,7 @@ export default function Home() {
             alt="Kata Csuhaj"
             width={500}
             height={500}
+            priority={true}
             className="-mt-20 max-h-[50vh] md:max-h-[75vh] w-auto mx-auto hover:scale-110 transition-transform hover:rotate-3"
           />
           <svg
@@ -162,10 +163,11 @@ const WorkItem = ({
       >
         <Image
           src={src}
-          alt="Landing page redesign for a digital agency"
+          alt={title}
           width={200}
           height={150}
           className=""
+          priority={true}
         />
         <div className="flex justify-between w-full mx-2">
           <div className="w-full flex flex-col justify-between">

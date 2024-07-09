@@ -8,14 +8,16 @@ export default function Home({ params: { id } }: { params: { id: string } }) {
   return (
     <main>
       <BackButton />
-      {images.map((image) => (
+      {images.map((image, index) => (
         <Image
           key={image}
           src={image}
           alt="Kata Csuhaj"
           width={1200}
           height={1200}
+          priority={index === 0}
           className="w-full"
+          placeholder="blur"
         />
       ))}
       <GoUpButton />
