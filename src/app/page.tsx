@@ -61,7 +61,7 @@ export default function Home() {
             <p className="text-left">I&apos;m Kata a communication designer</p>
             <p className="text-center">based in</p>
             <p>
-              <b>Bischofshofen</b>, Austria.🇦🇹
+              <b>Bischofshofen</b>, Austria
             </p>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function Home() {
           <p className="">I&apos;m Kata a communication designer</p>
           <p className="text-center">based in</p>
           <p className="text-right">
-            <b>Bischofshofen</b>, Austria.🇦🇹
+            <b>Bischofshofen</b>, Austria.
           </p>
         </div>
       </div>
@@ -162,19 +162,19 @@ const WorkItem = ({
     <div className="border-b-2 border-black group">
       <Link
         href={`/works/${id}`}
-        className="flex p-4 justify-between w-full col-span-1 md:hover:scale-110 transition-transform"
+        className="flex-row md:flex p-4 justify-between w-full col-span-1 md:hover:scale-110 transition-transform"
       >
         <Image
           src={src}
           alt={title}
           width={200}
           height={150}
-          className=""
+          className="w-full md:w-[200px]"
           priority={true}
         />
         <div className="flex justify-between w-full mx-2">
           <div className="w-full flex flex-col justify-between">
-            <p className="sm:text-2xl text-base w-full">{title}</p>
+            <p className="md:text-2xl text-xl mt-2 w-full">{title}</p>
             <div className="flex flex-row mt-auto flex-wrap">
               {actions?.map((a) => (
                 <Pill key={a}>{a}</Pill>
@@ -204,7 +204,7 @@ const WorkItem = ({
 
 const Pill = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="bg-black rounded-[50%] p-[1px] md:mx-1 my-[1px]">
+    <div className="bg-black rounded-[50%] p-[1px] mr-1 my-[1px]">
       <p className="text-sm text-center bg-white rounded-[50%] pt-[2px] px-2">
         {children}
       </p>
