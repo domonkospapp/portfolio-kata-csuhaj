@@ -79,7 +79,7 @@ export default function Home() {
         layouts.
       </p>
       <Title>WORK</Title>
-      <div className="grid md:gap-10 md:grid-cols-2 grid-cols-1 md:w-full md:p-10">
+      <div className="grid md:gap-10 md:grid-cols-2 grid-cols-1 w-full md:p-10">
         <WorkItem
           id="ai11"
           title="AI11 LANDING"
@@ -174,10 +174,8 @@ const WorkItem = ({
         />
         <div className="flex justify-between w-full mx-2">
           <div className="w-full flex flex-col justify-between">
-            <p className="sm:text-2xl text-base sm:text-left text-right w-full">
-              {title}
-            </p>
-            <div className="flex-col md:flex md:flex-row mt-auto flex-wrap">
+            <p className="sm:text-2xl text-base w-full">{title}</p>
+            <div className="flex flex-row mt-auto flex-wrap">
               {actions?.map((a) => (
                 <Pill key={a}>{a}</Pill>
               ))}
