@@ -78,7 +78,6 @@ export default function Home() {
         <br />I also have a passion for crafting illustrations, and designing
         layouts.
       </p>
-      <h2 className="text-4xl my-12 text-center">Check out my work!</h2>
       <Title>WORK</Title>
       <div className="grid md:gap-10 md:grid-cols-2 grid-cols-1 md:w-full md:p-10">
         <WorkItem
