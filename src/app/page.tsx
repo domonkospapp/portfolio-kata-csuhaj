@@ -73,7 +73,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <p className="text-3xl md:text-4xl md:max-w-screen-sm my-8 text-left self-start md:ml-12 ml-0">
+      <p className="text-3xl md:text-4xl md:max-w-screen-md my-8 text-left self-start md:ml-12 ml-0">
         With main focus on <b>web</b> and <b>communication</b> design,
         <br />I also have a passion for crafting illustrations, and designing
         layouts.
