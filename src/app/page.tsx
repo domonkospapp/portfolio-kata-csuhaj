@@ -162,7 +162,7 @@ const WorkItem = ({
     <div className="border-b-2 border-black group">
       <Link
         href={`/works/${id}`}
-        className="flex p-4 justify-between w-full col-span-1 hover:scale-110 transition-transform"
+        className="flex p-4 justify-between w-full col-span-1 md:hover:scale-110 transition-transform"
       >
         <Image
           src={src}
@@ -190,7 +190,7 @@ const WorkItem = ({
             viewBox="0 0 24 24"
             stroke-width="2"
             stroke="currentColor"
-            className="size-6 transition-transform group-hover:-rotate-[135deg] ml-2 sm:block hidden"
+            className="size-6 transition-transform md:group-hover:-rotate-[135deg] ml-2 sm:block hidden"
           >
             <path
               stroke-linecap="round"
