@@ -87,16 +87,16 @@ export default function Home() {
           actions={["UI/UX"]}
         />
         <WorkItem
+          id="flux"
+          title="FLUX"
+          src="/thumbnails/flux.png"
+          actions={["BRANDING", "PACKAGING"]}
+        />
+        <WorkItem
           id="mindshift"
           title="BACHELOR THESIS"
           src="/thumbnails/mindshift.gif"
           actions={["BRANDING", "UI/UX", "EDITORIAL"]}
-        />
-        <WorkItem
-          id="reemo"
-          title="REEMO VISUALS"
-          src="/thumbnails/reemo.png"
-          actions={["BRANDING", "UI/UX"]}
         />
         <WorkItem
           id="surreal"
@@ -105,16 +105,16 @@ export default function Home() {
           actions={["EDITORIAL"]}
         />
         <WorkItem
+          id="reemo"
+          title="REEMO VISUALS"
+          src="/thumbnails/reemo.png"
+          actions={["BRANDING", "UI/UX"]}
+        />
+        <WorkItem
           id="illustrations?margin=true"
           title="ILLUSTRATIONS"
           src="/thumbnails/illustrations.png"
           actions={["ILLUSTRATION", "POSTER"]}
-        />
-        <WorkItem
-          id="flux"
-          title="FLUX"
-          src="/thumbnails/flux.png"
-          actions={["BRANDING", "PACKAGING"]}
         />
       </div>
       <Title>
