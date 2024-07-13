@@ -174,7 +174,9 @@ const WorkItem = ({
         />
         <div className="flex justify-between w-full mx-2">
           <div className="w-full flex flex-col justify-between">
-            <p className="md:text-2xl text-xl mt-2 w-full">{title}</p>
+            <p className="md:text-2xl text-xl mt-4 mb-2 md:mt-0 md:mb-0 w-full">
+              {title}
+            </p>
             <div className="flex flex-row mt-auto flex-wrap">
               {actions?.map((a) => (
                 <Pill key={a}>{a}</Pill>
