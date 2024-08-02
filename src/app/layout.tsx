@@ -55,6 +55,8 @@ export const metadata: Metadata = {
   title: "Kata Csuhaj - Communication Designer",
   description:
     "Kata Csuhaj is a communication designer based in Bischofshofen, Austria.",
+  keywords:
+    "communication designer, graphic designer, web designer, web developer, kata csuhaj, bischofshofen, austria",
 };
 
 export default function RootLayout({
