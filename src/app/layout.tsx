@@ -57,6 +57,9 @@ export const metadata: Metadata = {
     "Kata Csuhaj is a communication designer based in Bischofshofen, Austria.",
   keywords:
     "communication designer, graphic designer, web designer, web developer, kata csuhaj, bischofshofen, austria",
+  verification: {
+    google: "2wckC5wKZ4wcbEYP7UQwBP_VTTndxCM6iUwEiI3FkIY",
+  },
 };
 
 export default function RootLayout({
