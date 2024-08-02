@@ -34,6 +34,7 @@ export default function Home() {
             src="/thedesigner.png"
             alt="Kata Csuhaj"
             width={500}
+            layout="intrinsic"
             height={500}
             priority={true}
             className="-mt-20 max-h-[50vh] md:max-h-[75vh] w-auto mx-auto hover:scale-110 transition-transform hover:rotate-3"
