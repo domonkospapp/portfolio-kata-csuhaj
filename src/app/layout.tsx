@@ -72,6 +72,7 @@ export default function RootLayout({
       lang="en"
       className={`${polonium.variable} ${cairo.variable} ${machina.className}`}
     >
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={machina.className}>
         {children}
         <AnimatedCursor
