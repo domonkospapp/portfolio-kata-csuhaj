@@ -1,5 +1,12 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata = {
+  title: "Kata Csuhaj - Communication Designer",
+  description:
+    "Kata Csuhaj is a communication designer based in Bischofshofen, Austria.",
+} satisfies Metadata;
 
 export default function Home() {
   return (
@@ -32,6 +39,8 @@ export default function Home() {
         <div className="">
           <Image
             src="/thedesigner.png"
+            blurDataURL="/thedesigner-small.png"
+            placeholder="blur"
             alt="Kata Csuhaj"
             width={500}
             layout="intrinsic"
