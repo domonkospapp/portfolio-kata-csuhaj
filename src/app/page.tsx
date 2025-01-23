@@ -135,8 +135,7 @@ export default function Home() {
         TACT
       </Title>
       <p className="text-xl">
-        <b>Email:</b>
-        <br />
+        <b>Email: </b>
         <a href="mailto:csuhajkata@gmail.com" className="hover:underline">
           csuhajkata@gmail.com
         </a>
