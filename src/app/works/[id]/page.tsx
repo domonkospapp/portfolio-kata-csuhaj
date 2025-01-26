@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import fs from "fs";
 import path from "path";
 import BackButton from "@/components/BackButton";
@@ -17,6 +16,9 @@ export default function Home({
   return (
     <main>
       <BackButton />
+      <div className="fixed h-full w-full text-4xl flex justify-center items-center -z-20">
+        LOADING...
+      </div>
       <div className={margin && "max-w-screen-md mx-auto"}>
         {images.map((image, index) => (
           <Image
