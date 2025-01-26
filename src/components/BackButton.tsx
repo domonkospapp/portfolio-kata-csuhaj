@@ -5,21 +5,33 @@ import { useRouter } from "next/navigation";
 export default function BackButton() {
   const router = useRouter();
   return (
-    <button onClick={router.back} className="fixed rounded-full bg-white m-1">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        className="size-8 m-2"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-        />
-      </svg>
+    <button
+      onClick={router.back}
+      className="h-16 w-20 fixed rounded-full m-2 z-40 hover:-translate-x-4 transition-transform duration-500 rotate-180"
+    >
+      <div
+        style={{
+          position: "absolute",
+          top: "10%",
+          right: "30%",
+          width: "20%",
+          height: "40%",
+          transform: "skew(45deg)",
+          backdropFilter: "invert(1)",
+        }}
+      />
+
+      <div
+        style={{
+          position: "absolute",
+          bottom: "10%",
+          right: "30%",
+          width: "20%",
+          height: "40%",
+          transform: "skew(-45deg)",
+          backdropFilter: "invert(1)",
+        }}
+      />
     </button>
   );
 }
