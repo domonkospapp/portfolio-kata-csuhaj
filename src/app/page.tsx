@@ -152,7 +152,7 @@ export default function Home() {
 
 const Title = ({ children }: { children: React.ReactNode }) => {
   return (
-    <h1 className="text-6xl md:text-9xl text-center font-bold font-polonium mt-8 mb-4">
+    <h1 className="text-6xl md:text-9xl text-center font-bold font-polonium mt-32 mb-4">
       {children}
     </h1>
   );
